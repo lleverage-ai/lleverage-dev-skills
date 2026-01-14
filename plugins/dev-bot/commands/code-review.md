@@ -27,7 +27,19 @@ Arguments:
    - Nitpicks a senior engineer wouldn't mention
    - Intentional changes related to the PR's purpose
 
-5. **Post review with inline comments**: Use the GitHub API to submit a review:
+5. **Validate issues**: For each remaining issue, launch a parallel Haiku agent to validate it's not a false positive. The agent should:
+   - Re-read the relevant code context
+   - Verify the issue is real and introduced by this PR
+   - Check if it's actually a bug vs intentional behavior
+   - Score confidence 0-100
+
+   Discard any issue scoring below 80. Common false positives:
+   - Code that looks wrong but is correct in context
+   - Issues already handled elsewhere in the codebase
+   - Stylistic concerns disguised as bugs
+   - Changes that are intentional based on PR description
+
+6. **Post review with inline comments**: Use the GitHub API to submit a review:
 
    a. Create inline comments for each issue using `gh api`:
    ```bash
