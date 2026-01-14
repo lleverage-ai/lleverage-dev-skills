@@ -1,4 +1,4 @@
-# Agent Skills
+# Lleverage Dev Skills
 
 Lleverage agent skills for Claude Code development workflows.
 
@@ -7,13 +7,13 @@ Lleverage agent skills for Claude Code development workflows.
 Add the marketplace to Claude Code:
 
 ```bash
-claude plugin marketplace add lleverage-ai/agent-skills
+claude plugin marketplace add lleverage-ai/lleverage-dev-skills
 ```
 
 Install a plugin:
 
 ```bash
-claude plugin install code-review@agent-skills
+claude plugin install code-review@lleverage-dev-skills
 ```
 
 ## Plugins
