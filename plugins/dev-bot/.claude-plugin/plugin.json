@@ -5,5 +5,5 @@
     "name": "Lleverage",
     "email": "hello@lleverage.ai"
   },
-  "commands": "../commands/"
+  "commands": "./commands/"
 }
